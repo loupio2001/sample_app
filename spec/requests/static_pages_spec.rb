@@ -33,6 +33,9 @@ describe "Static pages" do
     it { should have_content('Contact') }
     it { should have_title(full_title('Contact')) }
   end
+  
+  require 'spec_helper'
+
 
   it "should have the right links on the layout" do
     visit root_path
@@ -49,5 +52,6 @@ describe "Static pages" do
     click_link "sample app"
     expect(page).to have_title(full_title(''))
   end
-
+  
+	
 end

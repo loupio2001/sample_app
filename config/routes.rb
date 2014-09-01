@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-	get "users/new"
+	resources :users
 
 	# user_pages routes
-	match '/signup', 	to: 'user#new',					via:'get'
+	match '/signup', 	to: 'users#new',					via:'get'
 	
 	# static_pages routes
 	root 'static_pages#home'
